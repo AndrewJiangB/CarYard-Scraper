@@ -1,0 +1,1089 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-itunes-app" content="app-id=368660809" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam-cell.nr-data.net","errorBeacon":"bam-cell.nr-data.net","licenseKey":"404c1769df","applicationID":"60226763","transactionName":"M1RVZxQCWEYCVkQKCgoeemUlTGBRE3ZfDREWXltfAxEZfA1RVRs=","queueTime":0,"applicationTime":150,"agent":"","atts":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UgUPVV5SGwUAVlNUAAcE",licenseKey:"404c1769df",applicationID:"60226763"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(27),c={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,o.indexOf("dev")!==-1&&(c.dev=!0),o.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&i.on("internal-error",function(t){r(t.stack)}),c.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,c){try{l?l-=1:o(c||new UncaughtException(t,e,n),!0)}catch(f){try{i("ierr",[f,s.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t,e){var n=e?null:s.now();i("err",[t,n])}var i=t("handle"),a=t(28),c=t("ee"),s=t("loader"),f=t("gos"),u=window.onerror,d=!1,p="nr@seenError",l=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(13),t(12),"addEventListener"in window&&t(6),s.xhrWrappable&&t(14),d=!0)}c.on("fn-start",function(t,e,n){d&&(l+=1)}),c.on("fn-err",function(t,e,n){d&&!n[p]&&(f(n,p,function(){return!0}),this.thrown=!0,o(n))}),c.on("fn-end",function(){d&&!this.thrown&&l>0&&(l-=1)}),c.on("internal-error",function(t){i("ierr",[t,s.now(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(){_++,T=g.hash,this[u]=y.now()}function o(){_--,g.hash!==T&&i(0,!0);var t=y.now();this[h]=~~this[h]+t-this[u],this[d]=t}function i(t,e){E.emit("newURL",[""+g,e])}function a(t,e){t.on(e,function(){this[e]=y.now()})}var c="-start",s="-end",f="-body",u="fn"+c,d="fn"+s,p="cb"+c,l="cb"+s,h="jsTime",m="fetch",v="addEventListener",w=window,g=w.location,y=t("loader");if(w[v]&&y.xhrWrappable){var x=t(10),b=t(11),E=t(8),R=t(6),O=t(13),N=t(7),M=t(14),P=t(9),S=t("ee"),C=S.get("tracer");t(16),y.features.spa=!0;var T,_=0;S.on(u,r),S.on(p,r),S.on(d,o),S.on(l,o),S.buffer([u,d,"xhr-done","xhr-resolved"]),R.buffer([u]),O.buffer(["setTimeout"+s,"clearTimeout"+c,u]),M.buffer([u,"new-xhr","send-xhr"+c]),N.buffer([m+c,m+"-done",m+f+c,m+f+s]),E.buffer(["newURL"]),x.buffer([u]),b.buffer(["propagate",p,l,"executor-err","resolve"+c]),C.buffer([u,"no-"+u]),P.buffer(["new-jsonp","cb-start","jsonp-error","jsonp-end"]),a(M,"send-xhr"+c),a(S,"xhr-resolved"),a(S,"xhr-done"),a(N,m+c),a(N,m+"-done"),a(P,"new-jsonp"),a(P,"jsonp-end"),a(P,"cb-start"),E.on("pushState-end",i),E.on("replaceState-end",i),w[v]("hashchange",i,!0),w[v]("load",i,!0),w[v]("popstate",function(){i(0,_>1)},!0)}},{}],5:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(13),c=t(12),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",p="resource",l="-start",h="-end",m="fn"+l,v="fn"+h,w="bstTimer",g="pushState",y=t("loader");y.features.stn=!0,t(8),"addEventListener"in window&&t(6);var x=NREUM.o.EV;o.on(m,function(t,e){var n=t[0];n instanceof x&&(this.bstStart=y.now())}),o.on(v,function(t,e){var n=t[0];n instanceof x&&i("bst",[n,e,this.bstStart,y.now()])}),a.on(m,function(t,e,n){this.bstStart=y.now(),this.bstType=n}),a.on(v,function(t,e){i(w,[e,this.bstStart,y.now(),this.bstType])}),c.on(m,function(){this.bstStart=y.now()}),c.on(v,function(t,e){i(w,[e,this.bstStart,y.now(),"requestAnimationFrame"])}),o.on(g+l,function(t){this.time=y.now(),this.startPath=location.pathname+location.hash}),o.on(g+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(p)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(p)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],6:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){c.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),c=t("wrap-function")(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],7:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=i(arguments),e={};o.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var c=r.apply(this,t);return o.emit(n+"start",[t,a],c),c.then(function(t){return o.emit(n+"end",[null,t],c),t},function(t){throw o.emit(n+"end",[t],c),t})})}var o=t("ee").get("fetch"),i=t(28),a=t(27);e.exports=o;var c=window,s="fetch-",f=s+"body-",u=["arrayBuffer","blob","json","text","formData"],d=c.Request,p=c.Response,l=c.fetch,h="prototype",m="nr@context";d&&p&&l&&(a(u,function(t,e){r(d[h],e,f),r(p[h],e,f)}),r(c,"fetch",s),o.on(s+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),o.emit(s+"done",[null,e],n)}else o.emit(s+"done",[t],n)}))},{}],8:[function(t,e,n){var r=t("ee").get("history"),o=t("wrap-function")(r);e.exports=r;var i=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;i&&i.pushState&&i.replaceState&&(a=i),o.inPlace(a,["pushState","replaceState"],"-")},{}],9:[function(t,e,n){function r(t){function e(){s.emit("jsonp-end",[],p),t.removeEventListener("load",e,!1),t.removeEventListener("error",n,!1)}function n(){s.emit("jsonp-error",[],p),s.emit("jsonp-end",[],p),t.removeEventListener("load",e,!1),t.removeEventListener("error",n,!1)}var r=t&&"string"==typeof t.nodeName&&"script"===t.nodeName.toLowerCase();if(r){var o="function"==typeof t.addEventListener;if(o){var a=i(t.src);if(a){var u=c(a),d="function"==typeof u.parent[u.key];if(d){var p={};f.inPlace(u.parent,[u.key],"cb-",p),t.addEventListener("load",e,!1),t.addEventListener("error",n,!1),s.emit("new-jsonp",[t.src],p)}}}}}function o(){return"addEventListener"in window}function i(t){var e=t.match(u);return e?e[1]:null}function a(t,e){var n=t.match(p),r=n[1],o=n[3];return o?a(o,e[r]):e[r]}function c(t){var e=t.match(d);return e&&e.length>=3?{key:e[2],parent:a(e[1],window)}:{key:t,parent:window}}var s=t("ee").get("jsonp"),f=t("wrap-function")(s);if(e.exports=s,o()){var u=/[?&](?:callback|cb)=([^&#]+)/,d=/(.*)\.([^.]+)/,p=/^(\w+)(\.|$)(.*)$/,l=["appendChild","insertBefore","replaceChild"];Node&&Node.prototype&&Node.prototype.appendChild?f.inPlace(Node.prototype,l,"dom-"):(f.inPlace(HTMLElement.prototype,l,"dom-"),f.inPlace(HTMLHeadElement.prototype,l,"dom-"),f.inPlace(HTMLBodyElement.prototype,l,"dom-")),s.on("dom-start",function(t){r(t[0])})}},{}],10:[function(t,e,n){var r=t("ee").get("mutation"),o=t("wrap-function")(r),i=NREUM.o.MO;e.exports=r,i&&(window.MutationObserver=function(t){return this instanceof i?new i(o(t,"fn-")):i.apply(this,arguments)},MutationObserver.prototype=i.prototype)},{}],11:[function(t,e,n){function r(t){var e=a.context(),n=c(t,"executor-",e),r=new f(n);return a.context(r).getCtx=function(){return e},a.emit("new-promise",[r,e],e),r}function o(t,e){return e}var i=t("wrap-function"),a=t("ee").get("promise"),c=i(a),s=t(27),f=NREUM.o.PR;e.exports=a,f&&(window.Promise=r,["all","race"].forEach(function(t){var e=f[t];f[t]=function(n){function r(t){return function(){a.emit("propagate",[null,!o],i),o=o||!t}}var o=!1;s(n,function(e,n){Promise.resolve(n).then(r("all"===t),r(!1))});var i=e.apply(f,arguments),c=f.resolve(i);return c}}),["resolve","reject"].forEach(function(t){var e=f[t];f[t]=function(t){var n=e.apply(f,arguments);return t!==n&&a.emit("propagate",[t,!0],n),n}}),f.prototype["catch"]=function(t){return this.then(null,t)},f.prototype=Object.create(f.prototype,{constructor:{value:r}}),s(Object.getOwnPropertyNames(f),function(t,e){try{r[e]=f[e]}catch(n){}}),a.on("executor-start",function(t){t[0]=c(t[0],"resolve-",this),t[1]=c(t[1],"resolve-",this)}),a.on("executor-err",function(t,e,n){t[1](n)}),c.inPlace(f.prototype,["then"],"then-",o),a.on("then-start",function(t,e){this.promise=e,t[0]=c(t[0],"cb-",this),t[1]=c(t[1],"cb-",this)}),a.on("then-end",function(t,e,n){this.nextPromise=n;var r=this.promise;a.emit("propagate",[r,!0],n)}),a.on("cb-end",function(t,e,n){a.emit("propagate",[n,!0],this.nextPromise)}),a.on("propagate",function(t,e,n){this.getCtx&&!e||(this.getCtx=function(){if(t instanceof Promise)var e=a.context(t);return e&&e.getCtx?e.getCtx():this})}),r.toString=function(){return""+f})},{}],12:[function(t,e,n){var r=t("ee").get("raf"),o=t("wrap-function")(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],13:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t("wrap-function")(i),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(s+u,r),i.on(c+u,o)},{}],14:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,g,"fn-",c)}function i(t){y.push(t),h&&(b?b.then(a):v?v(a):(E=-E,R.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(6);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),p=NREUM.o,l=p.XHR,h=p.MO,m=p.PR,v=p.SI,w="readystatechange",g=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];e.exports=u;var x=window.XMLHttpRequest=function(t){var e=new l(t);try{u.emit("new-xhr",[e],e),e.addEventListener(w,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(l,x),x.prototype=l.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!v&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===w||a()})},{}],15:[function(t,e,n){function r(t){if(!c(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,f=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var h=l.generateSpanId(),m=l.generateTraceId(),v=Date.now(),w={spanId:h,traceId:m,timestamp:v};return(t.sameOrigin||s(t)&&p())&&(w.traceContextParentHeader=o(h,m),w.traceContextStateHeader=i(h,v,n,r,f)),(t.sameOrigin&&!u()||!t.sameOrigin&&s(t)&&d())&&(w.newrelicHeader=a(h,m,v,n,r,f)),w}function o(t,e){return"00-"+e+"-"+t+"-01"}function i(t,e,n,r,o){var i=0,a="",c=1,s="",f="";return o+"@nr="+i+"-"+c+"-"+n+"-"+r+"-"+t+"-"+a+"-"+s+"-"+f+"-"+e}function a(t,e,n,r,o,i){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var c={v:[0,1],d:{ty:"Browser",ac:r,ap:o,id:t,tr:e,ti:n}};return i&&r!==i&&(c.d.tk=i),btoa(JSON.stringify(c))}function c(t){return f()&&s(t)}function s(t){var e=!1,n={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=NREUM.init.distributed_tracing),t.sameOrigin)e=!0;else if(n.allowed_origins instanceof Array)for(var r=0;r<n.allowed_origins.length;r++){var o=h(n.allowed_origins[r]);if(t.hostname===o.hostname&&t.protocol===o.protocol&&t.port===o.port){e=!0;break}}return e}function f(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.enabled}function u(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.exclude_newrelic_header}function d(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&NREUM.init.distributed_tracing.cors_use_newrelic_header!==!1}function p(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.cors_use_tracecontext_headers}var l=t(24),h=t(17);e.exports={generateTracePayload:r,shouldGenerateTrace:c}},{}],16:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<p;r++)t.removeEventListener(d[r],this.listener,!1);e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):i(this,t),n.cbTime=this.cbTime,u.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime]))}}function o(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=s(e),t.sameOrigin=t.parsedOrigin.sameOrigin}function i(t,e){t.params.status=e.status;var n=v(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(17),f=t(15).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],p=d.length,l=t("id"),h=t(21),m=t(20),v=t(18),w=window.XMLHttpRequest;a.features.xhr=!0,t(14),t(7),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,t.addEventListener("load",function(n){i(e,t)},!1),h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),u.on("open-xhr-start",function(t){this.params={method:t[0]},o(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);if(n){var r=!1;n.newrelicHeader&&(e.setRequestHeader("newrelic",n.newrelicHeader),r=!0),n.traceContextParentHeader&&(e.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&e.setRequestHeader("tracestate",n.traceContextStateHeader),r=!0),r&&(this.dt=n)}}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=m(r);i&&(n.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||o.loadCaptureCalled||(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var c=0;c<p;c++)e.addEventListener(d[c],this.listener,!1)}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("addEventListener-end",function(t,e){e instanceof w&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof w&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof w&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){function e(t,e){var n=!1;return e.newrelicHeader&&(t.set("newrelic",e.newrelicHeader),n=!0),e.traceContextParentHeader&&(t.set("traceparent",e.traceContextParentHeader),e.traceContextStateHeader&&t.set("tracestate",e.traceContextStateHeader),n=!0),n}var n,r=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url&&(n=t[0].url),n&&(this.parsedOrigin=s(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var o=f(this.parsedOrigin);if(o&&(o.newrelicHeader||o.traceContextParentHeader))if("string"==typeof t[0]){var i={};for(var a in r)i[a]=r[a];i.headers=new Headers(r.headers||{}),e(i.headers,o)&&(this.dt=o),t.length>1?t[1]=i:t.push(i)}else t[0]&&t[0].headers&&e(t[0].headers,o)&&(this.dt=o)})}},{}],17:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];var e=document.createElement("a"),n=window.location,o={};e.href=t,o.port=e.port;var i=e.href.split("://");!o.port&&i[1]&&(o.port=i[1].split("/")[0].split("@").pop().split(":")[1]),o.port&&"0"!==o.port||(o.port="https"===i[0]?"443":"80"),o.hostname=e.hostname||n.hostname,o.pathname=e.pathname,o.protocol=i[0],"/"!==o.pathname.charAt(0)&&(o.pathname="/"+o.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,c=e.hostname===document.domain&&e.port===n.port;return o.sameOrigin=a&&(!e.hostname||c),"/"===o.pathname&&(r[t]=o),o}},{}],18:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?o(t.response):"text"===n||""===n||void 0===n?o(t.responseText):void 0}var o=t(20);e.exports=r},{}],19:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[f.now()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(27),c=t(28),s=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(t,e){u[e]=o(p+e,!0,"api")}),u.addPageAction=o(p+"addPageAction",!0),u.setCurrentRouteName=o(p+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[f.now(),t,n],r),function(){if(s.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return e.apply(this,arguments)}catch(t){throw s.emit("fn-err",[arguments,this,t],n),t}finally{s.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){h[e]=o(l+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now(),!1,e])}},{}],20:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],21:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],22:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(i=Math.max((new Date).getTime(),i))-a}function o(){return i}var i=(new Date).getTime(),a=i,c=t(29);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=o},{}],23:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function o(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function i(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof h&&!v){var e=Math.round(t.timeStamp),n={type:t.type};e<=p.now()?n.fid=p.now()-e:e>p.offset&&e<=Date.now()?(e-=p.offset,n.fid=p.now()-e):e=p.now(),v=!0,d("timing",["fi",e,n])}}function c(t){d("pageHide",[p.now(),t])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var s,f,u,d=t("handle"),p=t("loader"),l=t(26),h=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(m){}f=new PerformanceObserver(o);try{f.observe({entryTypes:["largest-contentful-paint"]})}catch(m){}u=new PerformanceObserver(i);try{u.observe({type:"layout-shift",buffered:!0})}catch(m){}}if("addEventListener"in document){var v=!1,w=["click","keydown","mousedown","pointerdown","touchstart"];w.forEach(function(t){document.addEventListener(t,a,!1)})}l(c)}},{}],24:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var o,i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",c=0;c<i.length;c++)o=i[c],"x"===o?a+=t().toString(16):"y"===o?(o=3&t()|8,a+=o.toString(16)):a+=o;return a}function o(){return a(16)}function i(){return a(32)}function a(t){function e(){return n?15&n[r++]:16*Math.random()|0}var n=null,r=0,o=window.crypto||window.msCrypto;o&&o.getRandomValues&&Uint8Array&&(n=o.getRandomValues(new Uint8Array(31)));for(var i=[],a=0;a<t;a++)i.push(e().toString(16));return i.join("")}e.exports={generateUuid:r,generateSpanId:o,generateTraceId:i}},{}],25:[function(t,e,n){function r(t,e){if(!o)return!1;if(t!==o)return!1;if(!e)return!0;if(!i)return!1;for(var n=i.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,s=c.match(a);s&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(o="Safari",i=s[1])}e.exports={agent:o,version:i,match:r}},{}],26:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[o]?"hidden":"visible")}"addEventListener"in document&&i&&document.addEventListener(i,e,!1)}e.exports=r;var o,i,a;"undefined"!=typeof document.hidden?(o="hidden",i="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",i="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",i="webkitvisibilitychange",a="webkitVisibilityState")},{}],27:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],28:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],29:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?s(t,c,i):i()}function n(n,r,o,i){if(!p.aborted||i){t&&t(n,r,o);for(var a=e(o),c=m(n),s=c.length,f=0;f<s;f++)c[f].apply(a,r);var d=u[y[n]];return d&&d.push([x,n,r,a]),a}}function l(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function v(t){return d[t]=d[t]||o(n)}function w(t,e){f(t,function(t,n){e=e||"feature",y[n]=e,e in u||(u[e]=[])})}var g={},y={},x={on:l,addEventListener:l,removeEventListener:h,emit:n,get:v,listeners:m,context:e,buffer:w,abort:a,aborted:!1};return x}function i(){return new r}function a(){(u.api||u.feature)&&(p.aborted=!0,u=p.backlog={})}var c="nr@context",s=t("gos"),f=t(27),u={},d={},p=e.exports=o();p.backlog=u},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!b++){var t=x.info=NREUM.info,e=p.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();s(g,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+x.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+t.agent,e.parentNode.insertBefore(r,e)}}function o(){"complete"===p.readyState&&i()}function i(){c("mark",["domContent",a()+x.offset],null,"api")}var a=t(22),c=t("handle"),s=t(27),f=t("ee"),u=t(25),d=window,p=d.document,l="addEventListener",h="attachEvent",m=d.XMLHttpRequest,v=m&&m.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:m,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var w=""+location,g={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-spa-1184.min.js"},y=m&&v&&v[l]&&!/CriOS/.test(navigator.userAgent),x=e.exports={offset:a.getLastTimestamp(),now:a,origin:w,features:{},xhrWrappable:y,userAgent:u};t(19),t(23),p[l]?(p[l]("DOMContentLoaded",i,!1),d[l]("load",r,!1)):(p[h]("onreadystatechange",o),d[h]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var b=0},{}],"wrap-function":[function(t,e,n){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(28),a="nr@original",c=Object.prototype.hasOwnProperty,s=!1;e.exports=function(t,e){function n(t,e,n,o){function nrWrapper(){var r,a,c,s;try{a=this,r=i(arguments),c="function"==typeof n?n(r,a):n||{}}catch(f){p([f,"",[r,a,o],c])}u(e+"start",[r,a,o],c);try{return s=t.apply(a,r)}catch(d){throw u(e+"err",[r,a,d],c),d}finally{u(e+"end",[r,a,s],c)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,e,o,i){o||(o="");var a,c,s,f="-"===o.charAt(0);for(s=0;s<e.length;s++)c=e[s],a=t[c],r(a)||(t[c]=n(a,f?c+o:o,i,c))}function u(n,r,o){if(!s||e){var i=s;s=!0;try{t.emit(n,r,o,e)}catch(a){p([a,n,r,o])}s=i}}function d(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){p([r])}for(var o in t)c.call(t,o)&&(e[o]=t[o]);return e}function p(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),n.inPlace=f,n.flag=a,n}},{}]},{},["loader",2,16,5,3,4]);</script>
+    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
+
+    <meta name="google-site-verification" content="cBmEbrbx7iUtx2beR3NuCnF6lR-Qi4fsvtaNqPUKsqU"/>
+
+    
+
+<link rel="apple-touch-icon" sizes="180x180" href="/Images/EN-CA/Favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/Images/EN-CA/Favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/Images/EN-CA/Favicon/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/Images/EN-CA/Favicon/favicon-16x16.png">
+<link rel="manifest" href="/Images/EN-CA/Favicon/manifest.json">
+<link rel="mask-icon" href="/Images/EN-CA/Favicon/safari-pinned-tab.svg" color="#c9092e">
+<link rel="shortcut icon" href="/Images/EN-CA/Favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#3e3e3e">
+<meta name="msapplication-TileImage" content="/Images/EN-CA/Favicon/mstile-144x144.png">
+<meta name="msapplication-config" content="/Images/EN-CA/Favicon/browserconfig.xml">
+<meta name="theme-color" content="#3e3e3e">
+        <script>
+        var Trader = Trader || {};
+
+        var gtmManager;
+        Trader.initDataLayer = function() {
+            gtmManager = new GtmManager();
+            gtmManager.initializeDataLayer({"vehicle":{"adID":"5-50199414","adType":"dealer","car360Enabled":"no","category":"Cars, Trucks & SUVs","condition":"used","dealerID":"5-ON20080103120547992","financingPrice":"no","listingPosition":"pl","make":"Hyundai","model":"Santa Fe XL","price":"28499","priceAnalysis":"good price","priceHistory":"not used","province":"ON","rawLocation":"n/a","strikethrough":"no","subprimeLeadForm":"no","testingDimension":"pageload","transparency":"yes","upgradeHL":"yes","upgradeMobileBoost":"yes","upgradePL":"yes","upgradePPL":"no","upgradeTA":"no","upgradeTopSpot":"no","upgradeXPL":"no","upgradeInline":"no","upgradeSwipePro":"no","vehicleSpecialist":"no","year":"2019","olympus":"no","ncse":"no","chatEnabled":"no","chatProvider":"none","latlong":"","carfax":"view without email","showInsuranceWidgetOnTop":"no","totalPictures":"23","mainPictureCM":"no","cmPictures":"0","activeUpsells":"pl","digitalRetail":"no","serviceBadges":"book an appointment"},"pageType":"ad-details","loginStatus":"not logged in","detailViewType":"dv","showRemarketing":true,"build":"1.18120.1208.4307","clientType":"Unknown","clientId":"7","clientIp":"142.122.158.142","requestId":"731567126846702030","googleRemarketingParams":{"pagetype":"Listings","prodid":"5_50199414","source":"Dealer","make":"Hyundai","model":"Santa Fe XL","minyear":2019,"maxyear":2019,"minprice":"28499","maxprice":"28499","condition":"Used","city":"Scarborough"},"optimizely":{"expId":"none","varId":"none"}});
+        }
+    </script>
+    
+    <!-- Google Tag Manager -->
+    <script>
+        Trader.initGoogleTagManager = function () {
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || []; w[l].push({
+                    'gtm.start':
+                        new Date().getTime(), event: 'gtm.js'
+                }); var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-K7JHZJ');
+        }
+    </script>
+    <!-- End Google Tag Manager -->
+    
+
+    
+ 
+<script>
+  
+    var Trader = Trader || {};
+    
+    Trader.setUniqueUserId = function () {
+        if (window.localStorage && window.localStorage.getItem("at_uid") === null) {
+            window.localStorage.setItem("at_uid", "e3a10f55-8fd9-4dbf-9f9e-5947b118685c");
+        }
+    }
+</script>
+ 
+    
+    <script>
+    var Trader = Trader || {};
+</script>
+
+<script src="/bundles/header-scripts-prod.81e71574.js"></script>
+<script>
+    try {
+
+        Trader.initDataLayer();
+        Trader.initGoogleTagManager();
+        Trader.setUniqueUserId();
+    } catch (e) {
+        console.error(e);
+    }
+
+</script>
+
+
+<script src="https://cdn.optimizely.com/js/11085769837.js"></script>
+    
+
+<input type="hidden" id="experiment">
+<input type="hidden" id="optVariation">
+<input type="hidden" id="deviceType" value="Desktop">
+<input type="hidden" id="pageType" value="VDP">
+<input type="hidden" id="isEnglish" value="en-ca">
+<input type="hidden" id="isExperimentOnMobile" value="false">
+<input type="hidden" id="optimizelyCulture" value="EN">
+<input type="hidden" id="vehicleType" value="PV">
+<input type="hidden" id="sellerType" value="Dealer">
+<input type="hidden" id="tablet" value="false">
+
+<script src="https://cdn.optimizely.com/datafiles/QAcf8t2Y6C3uCcB6QtKdMs.json/tag.js"></script>
+<script src="/bundles/optimizely-sdk-prod.3344ce9c.js"></script>
+
+
+
+<script>
+    var Trader = Trader || {};
+    var loadDeferredStyles = function (id) {
+        var addStylesNode = document.getElementById(id);
+        var replacement = document.createElement("div");
+        replacement.innerHTML = addStylesNode.textContent;
+        document.body.appendChild(replacement);
+        addStylesNode.parentElement.removeChild(addStylesNode);
+    };
+    var initLoadDeferredStyles = function (id) {
+        var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+            window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+        if (raf) {
+            raf(function () { window.setTimeout(loadDeferredStyles(id), 0); });
+        } else {
+            window.addEventListener('load', loadDeferredStyles(id));
+        }
+
+    }
+</script>
+<link href="/bundles/bootstrap.c9f1c9d4.css" rel="stylesheet" />
+<link href="/bundles/hulk.973ded9e.css" rel="stylesheet" />
+
+<link href="/bundles/header.1941c7ae.css" rel="stylesheet" />
+<link href="/bundles/main-shared.669397e0.css" rel="stylesheet"  media="none" onload="if (media != 'all') media = 'all'"/>
+
+
+
+<link href="/bundles/deferredStyles.00873350.css" rel="stylesheet" />
+    
+    
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "name": "autoTRADER.ca",
+        "url": "https://www.autotrader.ca/",
+        "logo": "https://www.autotrader.ca/Sites/2/Images/logo-eng.svg",
+        "sameAs": [
+            "https://www.facebook.com/autoTRADER.ca",
+            "https://twitter.com/autotrader_ca",
+            "https://plus.google.com/+autotraderca",
+            "https://www.youtube.com/channel/UC0NV63T5Uj_Gh8CoZ6UcIfQ"
+        ]
+    }
+    </script>
+    
+    <title>2019 Hyundai Santa Fe XL *PREF*BLINDSPOT*HEATEDSEATS*BCAM*RENTAL*AWD* - Scarborough</title>
+    <link rel="canonical" href="https://www.autotrader.ca/a/hyundai/santa fe xl/scarborough/ontario/5_50199414_on20080103120547992/" />
+    <meta name="description" content="*PREVIOUS DAILY RENTAL*
+
+GREAT VALUE IN THIS WELL EQUIPPED 7 SEATER SUV FINISHED IN NIGHT SKY PEARL ON BLACK CLOTH INTERIOR OPTIONED WITH AWD, KEYLESS ENTRY, POWERED & HEATED FRONT SEATS, HEATED LEATHER WRAPPED STEERING WHEEL, TOUCHSCREEN INFOTAINMENT SYSTEM, APPLE CARPLAY & ANDROID AUTO CAPABILITY, KEYLESS PROXIMITY ENTRY, POWERED TAILGATE, ALLOY WHEELS, REAR VIEW CAMERA, BLIND SPOT SENSORS, LANE DEPARTURE WARNING, AWD LOCK, COLLISION WARNING, POWER WINDOWS, POWER LOCKS AND MUCH MORE! 
+
+BALANCE FACTORY WARRANTY AVAILABLE!
+
+Stop by our state of art showroom to test drive this vehicle today! 
+CarFax vehicle history report readily available online and in store, safety standards certificate included at NO EXTRA CHARGE!
+
+Available zero down financing O.A.C. and extended warranty options! We also accept all trades regardless of the year make or model. Agincourt Hyundai pre-owned vehicle is professionally detailed, inspected and serviced by our Hyundai certified technician. 
+____________________________________________________
+Proudly celebrating our 35th year in business, serving the GTA region and customers all across Canada, we are famous for our no-pressure environment, and honest work ethics.
+We serve most cities in Canada including Toronto, Etobicoke, Woodbridge, North York, York Region, Vaughan, Thornhill, Richmond Hill, Mississauga, Brampton, Caledon, Scarborough, Markham, Oshawa, Peterborough, Hamilton, Newmarket, Orangeville, Aurora, Brantford, Barrie, Kitchener, Niagara Falls, Oakville, Cambridge, Kitchener, Waterloo, Guelph, London, Windsor, Orillia, Pickering, Ajax, Whitby, Durham, Cobourg, Belleville, Kingston, Ottawa, Montreal, Vancouver, Winnipeg, Calgary, Edmonton, Regina, Halifax, and more! Give us a chance and you'll see why our customers all come back to us! 
+_____________________________________________________________________________________
+Advertised price does not include taxes and licensing fees. No hidden fees. Whether shopping from near or far have comfort in your car purchase. Come on down and visit us, or call our sales department at 1-888-382-6251 " />
+    <meta property="og:title" content="2019 Hyundai Santa Fe XL *PREF*BLINDSPOT*HEATEDSEATS*BCAM*RENTAL*AWD* - Scarborough" />
+    <meta property="og:description" content="*PREVIOUS DAILY RENTAL*
+
+GREAT VALUE IN THIS WELL EQUIPPED 7 SEATER SUV FINISHED IN NIGHT SKY PEARL ON BLACK CLOTH INTERIOR OPTIONED WITH AWD, KEYLESS ENTRY, POWERED & HEATED FRONT SEATS, HEATED LEATHER WRAPPED STEERING WHEEL, TOUCHSCREEN INFOTAINMENT SYSTEM, APPLE CARPLAY & ANDROID AUTO CAPABILITY, KEYLESS PROXIMITY ENTRY, POWERED TAILGATE, ALLOY WHEELS, REAR VIEW CAMERA, BLIND SPOT SENSORS, LANE DEPARTURE WARNING, AWD LOCK, COLLISION WARNING, POWER WINDOWS, POWER LOCKS AND MUCH MORE! 
+
+BALANCE FACTORY WARRANTY AVAILABLE!
+
+Stop by our state of art showroom to test drive this vehicle today! 
+CarFax vehicle history report readily available online and in store, safety standards certificate included at NO EXTRA CHARGE!
+
+Available zero down financing O.A.C. and extended warranty options! We also accept all trades regardless of the year make or model. Agincourt Hyundai pre-owned vehicle is professionally detailed, inspected and serviced by our Hyundai certified technician. 
+____________________________________________________
+Proudly celebrating our 35th year in business, serving the GTA region and customers all across Canada, we are famous for our no-pressure environment, and honest work ethics.
+We serve most cities in Canada including Toronto, Etobicoke, Woodbridge, North York, York Region, Vaughan, Thornhill, Richmond Hill, Mississauga, Brampton, Caledon, Scarborough, Markham, Oshawa, Peterborough, Hamilton, Newmarket, Orangeville, Aurora, Brantford, Barrie, Kitchener, Niagara Falls, Oakville, Cambridge, Kitchener, Waterloo, Guelph, London, Windsor, Orillia, Pickering, Ajax, Whitby, Durham, Cobourg, Belleville, Kingston, Ottawa, Montreal, Vancouver, Winnipeg, Calgary, Edmonton, Regina, Halifax, and more! Give us a chance and you'll see why our customers all come back to us! 
+_____________________________________________________________________________________
+Advertised price does not include taxes and licensing fees. No hidden fees. Whether shopping from near or far have comfort in your car purchase. Come on down and visit us, or call our sales department at 1-888-382-6251 " />
+    <meta property="og:image" content="https://tdrpmimages.azureedge.net/photos/202012-0817-3704/79df043e-2de4-4d98-a277-2a651049e363_overlay.jpg-1024x786" />
+    <meta property="og:type" content="product" />
+    <meta property="og:url" content="https://www.autotrader.ca/a/hyundai/santa%20fe%20xl/scarborough/ontario/5_50199414_on20080103120547992/" />
+    <meta property="fb:app_id" content="162313827531727" />
+    <meta property="og:site_name" content="autoTRADER.ca" />
+
+        <script type='text/javascript'>
+        var slotHulk;
+        var googleDfpManager;
+        Trader.initGoogleDfpManager = function () {
+            if (googleDfpManager) return;
+            slotHulk = [];
+            googleDfpManager = new GoogleDfpManager(
+                new GoogleDfpBannerSet(
+                    [
+                    new GoogleDfpBannerTargeting('siteenvironment', ['www','test']),
+                    new GoogleDfpBannerTargeting('make', 'hyundai'),
+                    new GoogleDfpBannerTargeting('model', 'santa_fe_xl'),
+                    new GoogleDfpBannerTargeting('year', '2019'),
+                    new GoogleDfpBannerTargeting('price', '28499'),
+                    new GoogleDfpBannerTargeting('listing', 'dealer'),
+                    new GoogleDfpBannerTargeting('dealer', 'ON20080103120547992'),
+                    new GoogleDfpBannerTargeting('condition', 'used'),
+                    new GoogleDfpBannerTargeting('screensize', 'lg'),
+                    new GoogleDfpBannerTargeting('variation', ['none','none']),
+                                    ],
+                                    [
+            new GoogleDfpBanner('hulk-oop',
+                            '/8544/autoTRADER/Cars/Details',
+                [],
+            [
+            ],
+                            false,
+                            true),
+            new GoogleDfpBanner('hulk-leaderboard',
+                            '/8544/autoTRADER/Cars/Details',
+                [728,90],
+            [
+                        new GoogleDfpBannerTargeting('position', 'atf'),
+            ],
+                            false,
+                            false),
+            new GoogleDfpBanner('hulk-galleryleaderboard',
+                            '/8544/autoTRADER/Cars/DetailsGallery',
+                [728,90],
+            [
+                        new GoogleDfpBannerTargeting('position', 'atf'),
+            ],
+                            false,
+                            false),
+            new GoogleDfpBanner('hulk-bb-vdp-gallery',
+                            '/8544/autoTRADER/Cars/DetailsGallery',
+                [300,250],
+            [
+                        new GoogleDfpBannerTargeting('position', 'atf'),
+            ],
+                            false,
+                            false),
+            new GoogleDfpBanner('hulk-bb6',
+                            '/8544/autoTRADER/Cars/Details',
+                [300,250],
+            [
+                        new GoogleDfpBannerTargeting('position', 'btf'),
+            ],
+                            false,
+                            false),
+            new GoogleDfpBanner('gpt-ad-tile',
+                            '/8544/autoTRADER/Cars/Details',
+                [300,100],
+            [
+                        new GoogleDfpBannerTargeting('position', 'right'),
+            ],
+                            false,
+                            false),
+            new GoogleDfpBanner('gpt-ad-events1',
+                            '/8544/autoTRADER/Cars/Details',
+                [480,360],
+            [
+                        new GoogleDfpBannerTargeting('position', 'right'),
+                        new GoogleDfpBannerTargeting('listing', '_dealer_'),
+            ],
+                            false,
+                            false),
+                    ],
+                    false,
+                'VDP',
+                    true
+                )
+            );
+        }
+
+    </script>
+
+
+    
+    <meta content="en-ca" id="cultureName" />
+    <link href="/bundles/ng-vdp-fuji.206f48bd.css" rel="stylesheet" />
+
+
+    
+    
+</head>
+<body id="en-ca" class="desktop responsive">
+    <input type="hidden" class="hidden" id="enableAmazonHeaderBidding" value="true" />
+    <div class="hidden" id="env" data-prefix="" data-profileapiendpoint="https://tdrprofileapi.azurewebsites.net" data-requestid="1ed1aee1-9272-4c31-83e7-e7780a42e1a4" data-delaybannerrefresh="-1">Prod</div>
+    <div id="wrapper">
+        <div class="container-fluid">
+            
+            
+
+
+
+
+<header>
+    
+    <nav class="navbar navbar-inverse" id="navbarMicrosites">
+        <div class="container">
+            
+            <div class="navbar-header">
+                
+                <div id="mobileMicrosites">
+                    <form>
+                        <div class="">
+                            <div class="btn-group">
+                                <a class="btn dropdown-toggle btn-select" data-toggle="dropdown" href="#">Cars, Trucks &amp; SUVs <i class="far fa-chevron-down" aria-hidden="true"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/" class="active">Cars, Trucks &amp; SUVs</a></li>
+                                    <li><a href="/heavy_trucks" class="">Commercial / Heavy Trucks</a></li>
+                                    <li><a href="/trailers" class="">Trailers</a></li>
+                                    <li><a href="/rv" class="">RVs</a></li>
+                                    <li><a href="/boats" class="">Boats</a></li>
+                                    <li><a href="/watercraft" class="">Watercraft</a></li>
+                                    <li><a href="/motorcycles_atvs" class="">Bikes &amp; ATVs</a></li>
+                                    <li><a href="/snowmobiles" class="">Snowmobiles</a></li>
+                                    <li><a href="/heavy_equipment" class="">Heavy Equipment</a></li>
+                                    <li><a href="/farm_equipment" class="">Farm</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <ul class="nav navbar-nav navbar-right mobile" id="languageToggle" style="display: none;">
+                    
+                    <li><a href="https://www.autohebdo.net/a/hyundai/santa%20fe%20xl/scarborough/ontario/5_50199414_on20080103120547992/?showcpo=ShowCpo&amp;ncse=no&amp;ursrc=pl&amp;urp=2&amp;urm=8&amp;pc=L5L%201C6&amp;sprx=100" hreflang="fr-CA">FR</a></li>
+                </ul>
+            </div>
+            
+            <div class="collapse navbar-collapse" id="desktopMicrosites">
+                <ul class="nav navbar-nav">
+                    <li><a href="/" class="active">Cars, Trucks &amp; SUVs</a></li>
+                    <li><a href="/heavy_trucks" class="">Commercial / Heavy Trucks</a></li>
+                    <li><a href="/trailers" class="">Trailers</a></li>
+                    <li><a href="/rv" class="">RVs</a></li>
+                    <li><a href="/boats" class="">Boats</a></li>
+                    <li><a href="/watercraft" class="">Watercraft</a></li>
+                    <li><a href="/motorcycles_atvs" class="">Bikes &amp; ATVs</a></li>
+                    <li><a href="/snowmobiles" class="">Snowmobiles</a></li>
+                    <li><a href="/heavy_equipment" class="">Heavy Equipment</a></li>
+                    <li><a href="/farm_equipment" class="">Farm</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    
+    <div class="collapsed" id="navbarSpacer"></div>
+    <nav class="navbar navbar-inverse" id="navbarPrimary">
+        <div class="container">
+            <div class="navbar-header ">
+
+
+
+                    <a class="hidden-md hidden-lg" id="headerBackBtn" href="/cars/hyundai/santa%20fe%20xl/on/scarborough/?rcp=15&amp;rcs=0&amp;srt=3&amp;prx=50&amp;prv=Ontario&amp;loc=Scarborough&amp;hprc=True&amp;wcp=True">
+                        <i class="far fa-chevron-left" aria-hidden="true"></i>
+                        Back
+                    </a>
+                    <!-- Modal -->
+                    <div class="modal fade col-xs-12" id="socialMediaXS" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="socialMediaxs-title" id="exampleModalLabel">Share</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <div class="col-xs-12 col-md-12 nopadding" style="margin: 0;">
+                                        <hr style="width: 50px; padding: 0; margin: 0; margin-left: 15px; border: solid 2px #CC0000;">
+                                        <hr style="width: 95%; padding: 0; margin: 0; margin-left: 15px;">
+                                    </div>
+                                </div>
+                                <div class="modal-body">
+                                    <div id="social-media-icons-xs" class="col-xs-12 socialMedia-container-xs text-left">
+    <ul>
+        <li class="facebookLike col-xs-2 col-md-2 nopaddingLeft vdp-socialMedia-icons-div" style="overflow: visible;">
+            
+            <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.autotrader.ca%2Fa%2Fhyundai%2Fsanta%20fe%20xl%2Fscarborough%2Fontario%2F5_50199414_on20080103120547992%2F%3Fshowcpo%3DShowCpo%26ncse%3Dno%26ursrc%3Dpl%26urp%3D2%26urm%3D8%26pc%3DL5L%201C6%26sprx%3D100" 
+               onclick="socialMediaShareAd(this.href, 'facebook', 600, 600); return false;">
+                <img src="/Images/SVG/VDP/share_facebook.svg" style="margin-right: 10px;" data-provider="facebook" />
+                <h3>Facebook</h3>
+            </a>
+        </li>
+
+        <li class="at_twitter twittermargin col-xs-2 col-md-2 nopaddingLeft vdp-socialMedia-icons-div">
+            <a href="https://twitter.com/share?text=I just found a great deal on @autoTRADER_ca, check it out!&url=https%3A%2F%2Fwww.autotrader.ca%2Fa%2Fhyundai%2Fsanta%20fe%20xl%2Fscarborough%2Fontario%2F5_50199414_on20080103120547992%2F%3Fshowcpo%3DShowCpo%26ncse%3Dno%26ursrc%3Dpl%26urp%3D2%26urm%3D8%26pc%3DL5L%201C6%26sprx%3D100"
+               class="twitter-share-button" data-lang="en"
+               onclick="socialMediaShareAd(this.href, 'twitter', 400, 600); return false;">
+                <img src="/Images/SVG/VDP/share_twitter.svg" style="margin-right: 10px;" data-provider="twitter"/>
+                <h3>Twitter</h3>
+
+            </a>
+        </li>
+
+        <li class="col-xs-2 col-md-2 nopaddingLeft vdp-socialMedia-icons-div" onclick="openEmailAFriendXS()" style="cursor: pointer;">
+            <img src="/Images/SVG/VDP/share_mail_icon.svg" style="margin-right: 10px;" data-provider="email" />
+            <h3>Email to a Friend</h3>
+        </li>
+    </ul>
+                             
+</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                <a class="navbar-brand" href="/" aria-label="logo">
+                    <div id="logo" class="at-logo"></div>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="mainNav">
+                
+                <ul class="nav navbar-nav navbar-contextual">
+                    <li>
+
+                        <a href="/ico/sellmycar" onclick="gtmManager.headerClickSell();return true;">
+                            Sell My Car
+                            <span class="sellFreeTagContainer">
+                                <span class="freeTag"></span>
+                            </span>
+                        </a>
+                    </li>
+                    
+                        <li class="dropdown sub-dropdown shop-new-cars">
+                            <a class="dropdown-toggle" onclick="gtmManager.ncseExpanded();return true;" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                Shop New Cars <i class="far fa-angle-down desktop" aria-hidden="true"></i>
+                                <div class="dropdownIconContainer">
+                                    <i class="fas fa-plus" aria-hidden="true"></i>
+                                    <i class="fas fa-minus" aria-hidden="true"></i>
+                                </div>
+                            </a>
+                            
+<div class="dropdown-menu ncseDropdown megamenu" id="ncsePanel">
+    <div>
+        <div class="container">
+            <ul class="row">
+                    <li class="col-xs-12 col-sm-12 col-md-2 col-lg-2 vehicleContainer">
+                        <a href="/new/convertible" class="bodyTypeItem" onclick="gtmManager.ncseBodyTypeSelected('Convertible', 'top'); return true;">
+                            
+                            <span class="vehicleImage convertible">&nbsp;</span>
+                            <span class="vehicleName">Convertible</span>
+                        </a>
+                    </li>
+                    <li class="col-xs-12 col-sm-12 col-md-2 col-lg-2 vehicleContainer">
+                        <a href="/new/coupe" class="bodyTypeItem" onclick="gtmManager.ncseBodyTypeSelected('Coupe', 'top'); return true;">
+                            
+                            <span class="vehicleImage coupe">&nbsp;</span>
+                            <span class="vehicleName">Coupe</span>
+                        </a>
+                    </li>
+                    <li class="col-xs-12 col-sm-12 col-md-2 col-lg-2 vehicleContainer">
+                        <a href="/new/electric" class="bodyTypeItem" onclick="gtmManager.ncseBodyTypeSelected('Electric', 'top'); return true;">
+                            
+                            <span class="vehicleImage electric">&nbsp;</span>
+                            <span class="vehicleName">Electric/Hybrid Vehicles</span>
+                        </a>
+                    </li>
+                    <li class="col-xs-12 col-sm-12 col-md-2 col-lg-2 vehicleContainer">
+                        <a href="/new/hatchback" class="bodyTypeItem" onclick="gtmManager.ncseBodyTypeSelected('Hatchback', 'top'); return true;">
+                            
+                            <span class="vehicleImage hatchback">&nbsp;</span>
+                            <span class="vehicleName">Hatchback</span>
+                        </a>
+                    </li>
+                    <li class="col-xs-12 col-sm-12 col-md-2 col-lg-2 vehicleContainer">
+                        <a href="/new/minivan" class="bodyTypeItem" onclick="gtmManager.ncseBodyTypeSelected('Minivan', 'top'); return true;">
+                            
+                            <span class="vehicleImage minivan">&nbsp;</span>
+                            <span class="vehicleName">Minivan</span>
+                        </a>
+                    </li>
+                    <li class="col-xs-12 col-sm-12 col-md-2 col-lg-2 vehicleContainer">
+                        <a href="/new/sedan" class="bodyTypeItem" onclick="gtmManager.ncseBodyTypeSelected('Sedan', 'top'); return true;">
+                            
+                            <span class="vehicleImage sedan">&nbsp;</span>
+                            <span class="vehicleName">Sedan</span>
+                        </a>
+                    </li>
+                    <li class="col-xs-12 col-sm-12 col-md-2 col-lg-2 vehicleContainer">
+                        <a href="/new/suv" class="bodyTypeItem" onclick="gtmManager.ncseBodyTypeSelected('SUV', 'top'); return true;">
+                            
+                            <span class="vehicleImage suv">&nbsp;</span>
+                            <span class="vehicleName">SUV / Crossovers</span>
+                        </a>
+                    </li>
+                    <li class="col-xs-12 col-sm-12 col-md-2 col-lg-2 vehicleContainer">
+                        <a href="/new/truck" class="bodyTypeItem" onclick="gtmManager.ncseBodyTypeSelected('Truck', 'top'); return true;">
+                            
+                            <span class="vehicleImage truck">&nbsp;</span>
+                            <span class="vehicleName">Truck</span>
+                        </a>
+                    </li>
+                    <li class="col-xs-12 col-sm-12 col-md-2 col-lg-2 vehicleContainer">
+                        <a href="/new/wagon" class="bodyTypeItem" onclick="gtmManager.ncseBodyTypeSelected('Wagon', 'top'); return true;">
+                            
+                            <span class="vehicleImage wagon">&nbsp;</span>
+                            <span class="vehicleName">Wagon</span>
+                        </a>
+                    </li>
+
+                <li class="col-xs-12 col-sm-12 col-md-2 col-lg-2 vehicleContainer">
+                    <div class="moreLinkContainer">
+                        <a href="/new/all" class="bodyTypeItem" onclick="gtmManager.ncseBodyTypeSelected('all', 'top'); return true;">
+                            <div class="moreLinkContent">
+                                <div class="moreLink">
+                                    See all
+                                    <div class="moreLinkArrow hidden-xs hidden-sm">
+                                        <i class="far fa-angle-right"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+                        </li>
+                    <li class="dropdown sub-dropdown newsReviews">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            Reviews&nbsp;&amp;&nbsp;Advice&nbsp;<i class="far fa-angle-down desktop" aria-hidden="true"></i>
+                            <div class="dropdownIconContainer">
+                                <i class="fas fa-plus" aria-hidden="true"></i>
+                                <i class="fas fa-minus" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu tooltipMenu">
+                            <li><a href="/editorial/">Editorial Homepage</a></li>
+                            <li><a href="/newsfeatures/">News &amp; Features</a></li>
+                                <li><a href="/newsfeatures/car-news/">Auto News</a></li>
+                                <li><a href="/newsfeatures/fun-stuff/">Car Culture</a></li>
+                                <li><a href="/newsfeatures/buying-selling-tips/">Buy / Sell / Own</a></li>
+                            <li><a href="/expert/">Expert Reviews</a></li>
+                            <li><a href="/reviews/">Owner Reviews</a></li>
+                                <li><a href="/research/">Vehicle Research</a></li>
+                                                        <li>
+                                <a href="/motorcycle-research/">Motorcycle Research</a>
+                            </li>
+                            <li>
+                                <a href="/editorial/awards/">Awards</a>
+                            </li>
+                                <li><a href="/consumer/price-index/">Car Price Index</a></li>
+                            <li><a href="/research/comparison/">Car Comparison Tool</a></li>
+                        </ul>
+                    </li>
+                    
+                                            <li>
+                            <a href="/ico/valuations/" onclick="gtmManager.headerClickValuations();return true;">What&#39;s My Car Worth?</a>
+                        </li>
+                    <!--Flash Sale-->
+                    
+                </ul>
+
+                
+                <ul class="nav navbar-nav navbar-right myGarage">
+                        <li class="dropdown sub-dropdown" id="signin-dropwdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                Sign in
+                                <i class="far fa-angle-down desktop" aria-hidden="true"></i>
+                            </a>
+
+                            <ul class="dropdown-menu tooltipMenu">
+                                <li><a href="https://sellmycar.autotrader.ca/manage/index?lcid=2">Manage your Ad</a></li>
+                            </ul>
+                            
+                        </li>
+                    
+                    <li><a id="languageSwitch" href="https://www.autohebdo.net/a/hyundai/santa%20fe%20xl/scarborough/ontario/5_50199414_on20080103120547992/?showcpo=ShowCpo&amp;ncse=no&amp;ursrc=pl&amp;urp=2&amp;urm=8&amp;pc=L5L%201C6&amp;sprx=100" hreflang="fr-CA">FR</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    
+    
+<div class="login-modal-section">
+  <div id="login-modal-container" class="modal fade signInModal">
+    <div class="modal-vertical-align">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+        </div>
+      </div>
+    </div> 
+  </div>
+</div>
+
+<script>
+  Trader.initSignInModal = function() {
+    if (window.addEventListener) {
+      window.addEventListener("message", receiveMessage, false);
+    } else if (window.attachEvent) {
+      window.attachEvent("onmessage", receiveMessage, false);
+    }
+
+    function receiveMessage(event) {
+      if (event.data !== null && event.data.toString().indexOf('{') != 0)
+        return;
+      try {
+        var data = JSON.parse(event.data.toString());
+        if (typeof data === "object") {
+          if (data.action === 'Redirect') {
+            document.location = data.parameters.location;
+          }
+        }
+      } catch (err) {
+      }
+    }
+
+    $('body').on('click',
+      '#lnkSsoSignIn',
+      function (e) {
+        e.preventDefault();
+        $('#login-modal-container').modal('show').find('.modal-content').load($(this).attr('href'));
+      });
+
+    $('#login-modal-container').on('hidden.bs.modal',
+      function (e) {
+          $(this).removeData('bs.modal');
+        });
+  }
+
+</script>
+    <link href="/bundles/signin.4e9bf6cc.css" rel="stylesheet" />
+
+<div id="ssoModal" class="modal fade signInModal" role="dialog">
+    <div class="modal-vertical-align">
+        <div id="colorbox" class="modal-dialog ssoModalColorbox" role="dialog" tabindex="-1">
+            <div class="modal-content">
+                <a id="cboxClose" class="close" href="#" data-toggle="modal" data-target="#ssoModal" role="button"><span aria-hidden="true">x</span></a>
+                <div class="iframe-wrapper">
+                    <iframe id="ssoFrame" frameborder="0" scrolling="no" class="signin-iframe" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    Trader.initSSOModal = function() {
+            if (window.addEventListener) {
+                window.addEventListener("message", receiveMessage, false);
+            } else if (window.attachEvent) {
+                window.attachEvent("onmessage", receiveMessage, false);
+            }
+
+            function receiveMessage(event) {
+                if (!event || !event.data || event.data.toString().indexOf('{') !== 0)
+                    return;
+                try {
+                    var data = JSON.parse(event.data.toString());
+                    if (typeof data === "object") {
+                        if (data.action === 'Redirect') {
+                            document.location = data.parameters.location;
+                        }
+                    }
+                } catch (err) {
+                }
+            }
+
+        $('#ssoModal').on('shown.bs.modal', function () {
+            var attr = $('#ssoFrame').attr('src');
+            if (!attr) {
+                var returnUrl = (location.pathname + location.search);
+                var urlParams = new URLSearchParams(window.location.search);
+                var isFrmVal = 1;
+                var modalValue = urlParams.get('modal');
+
+                if (modalValue) {
+                    var res = modalValue.split(",");
+                    switch (res[0]) {
+                    case "Login":
+                        isFrmVal = 1;
+                        break;
+                    case "Register":
+                        isFrmVal = 2;
+                        break;
+                    case "ForgotPassword":
+                        isFrmVal = 3;
+                        break;
+                    case "ResetPassword":
+                        isFrmVal = 4;
+                        break;
+                    default:
+                        isFrmVal = 1;
+                        break;
+                    }
+                    urlParams.delete('modal');
+                }
+
+                urlParams.append('isfrm', isFrmVal);
+                
+                if (!urlParams.has('rurl')) {
+                    urlParams.append('rurl', returnUrl);
+                }
+                
+                    
+                $('#ssoFrame').attr('src', 'https://' + window.location.host + "/signin/?" + urlParams.toString());
+                //$('#ssoFrame').attr('src', 'https://' + window.location.host + "/signin/?rurl=" + encodeURIComponent(returnUrl));
+                    
+
+            }
+        });
+        window.onload = function () {
+            var urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('modal') != null) {
+                $("#ssoModal").modal('show');
+            }
+        }
+    }
+
+</script>
+    <script type="text/javascript">
+        window.onload = function () {
+            var urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('modal') != null) {
+                $("#ssoModal").modal('show');
+            }
+        }
+
+    </script>
+    
+
+</header>
+
+            
+            
+            
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    // render the negotiated content for ng vdp data
+    if (!window['ngVdpModel']) {
+        window['ngVdpModel'] = {
+            "currentCulture":"en",
+            "deepLinkSavedSearch":{
+                "savedSearch":{
+                    "id":"60475d75-0d9e-4a76-a1aa-e78cc01c3722",
+                    "query":"/cars/hyundai/santa%20fe%20xl/2019/on/scarborough/?rcp=0&rcs=0&srt=0&prx=100&prv=Ontario&hprc=False&wcp=False&sts=New-Used",
+                    "title":"2019 Hyundai Santa Fe XL for sale in Scarborough",
+                    "isMre":false,"type":0,"sourceId":0},
+                    "savedSearchCriteria":{
+                        "micrositeType":1,
+                        "micrositeCulture":"en-CA",
+                        "location":{
+                            "latitude":43.82103,
+                            "longitude":-79.246643},
+                        "provinceAbbreviation":"ON",
+                        "city":"Scarborough",
+                        "proximity":100,
+                        "adStatus":[1,2],
+                        "adType":[1,2],
+                        "makes":["Hyundai"],
+                        "models":["Santa Fe XL"],
+                        "cpoStatus":0,
+                        "sortBy":0,
+                        "yearRange":{"start":2019,"end":2019},
+                        "cashDown":0.0,
+                        "tradeIn":0.0
+                    }},
+                    "highlights":{
+                        "mileage":"56,513 km",
+                        "transmission":"Automatic",
+                        "drivetrain":"AWD",
+                        "items":["Alloy Wheels","Rear View Camera","Former Rental","Balance of Factory Warranty"]},
+                        "gallery":{"items":[{"type":"Photo","galleryUrl":"https://tdrpmimages.azureedge.net/photos/202012-0817-3704/79df043e-2de4-4d98-a277-2a651049e363_overlay.jpg-1024x786","photoViewerUrl":"https://tdrpmimages.azureedge.net/photos/202012-0817-3704/79df043e-2de4-4d98-a277-2a651049e363_overlay.jpg"},{"type":"Photo","galleryUrl":"https://tdrpmimages.azureedge.net/photos/202012-0817-3704/ed18f687-7f23-4764-b9f1-56d67647b78d.jpg-1024x786","photoViewerUrl":"https://tdrpmimages.azureedge.net/photos/202012-0817-3704/ed18f687-7f23-4764-b9f1-56d67647b78d.jpg"},{"type":"Photo","galleryUrl":"https://tdrpmimages.azureedge.net/photos/202012-0817-3704/cf7563e3-bede-4ef2-80c2-341cab206f75.jpg-1024x786","photoViewerUrl":"https://tdrpmimages.azureedge.net/photos/202012-0817-3704/cf7563e3-bede-4ef2-80c2-341cab206f75.jpg"},{"type":"Photo","galleryUrl":"https://tdrpmimages.azureedge.net/photos/202012-0817-3705/4061af6d-c365-4ad0-a133-f3d81258698f.jpg-1024x786","photoViewerUrl":"https://tdrpmimages.azureedge.net/photos/202012-0817-3705/4061af6d-c365-4ad0-a133-f3d81258698f.jpg"},{"type":"Photo","galleryUrl":"https://tdrpmimages.azureedge.net/photos/202012-0817-3705/d7e266ed-698c-4891-8602-8ce4d389b0b8.jpg-1024x786","photoViewerUrl":"https://tdrpmimages.azureedge.net/photos/202012-0817-3705/d7e266ed-698c-4891-8602-8ce4d389b0b8.jpg"},{"type":"Photo","galleryUrl":"https://tdrpmimages.azureedge.net/photos/202012-0817-3705/8fd6dd4e-9492-4d08-a44b-ef970d52a311.jpg-1024x786","photoViewerUrl":"https://tdrpmimages.azureedge.net/photos/202012-0817-3705/8fd6dd4e-9492-4d08-a44b-ef970d52a311.jpg"},{"type":"Photo","galleryUrl":"https://tdrpmimages.azureedge.net/photos/202012-0817-3706/581077bc-f18a-4489-b151-f99e01290f87.jpg-1024x786","photoViewerUrl":"https://tdrpmimages.azureedge.net/photos/202012-0817-3706/581077bc-f18a-4489-b151-f99e01290f87.jpg"},{"type":"Photo","galleryUrl":"https://tdrpmimages.azureedge.net/photos/202012-0817-3706/23cc8a65-6486-46d0-b8cc-8f0c5d1bed47.jpg-1024x786","photoViewerUrl":"https://tdrpmimages.azureedge.net/photos/202012-0817-3706/23cc8a65-6486-46d0-b8cc-8f0c5d1bed47.jpg"},{"type":"Photo","galleryUrl":"https://tdrpmimages.azureedge.net/photos/202012-0817-3706/7318ccd5-91dd-40ae-ba1d-b4be86fa9263.jpg-1024x786","photoViewerUrl":"https://tdrpmimages.azureedge.net/photos/202012-0817-3706/7318ccd5-91dd-40ae-ba1d-b4be86fa9263.jpg"},{"type":"Photo","galleryUrl":"https://tdrpmimages.azureedge.net/photos/202012-0817-3707/53de3b6c-15d9-420e-b947-d67f02f8fd4d.jpg-1024x786","photoViewerUrl":"https://tdrpmimages.azureedge.net/photos/202012-0817-3707/53de3b6c-15d9-420e-b947-d67f02f8fd4d.jpg"},{"type":"Photo","galleryUrl":"https://tdrpmimages.azureedge.net/photos/202012-0817-3707/9ca1a96c-3653-4e42-b7ad-a616dc8ed4e9.jpg-1024x786","photoViewerUrl":"https://tdrpmimages.azureedge.net/photos/202012-0817-3707/9ca1a96c-3653-4e42-b7ad-a616dc8ed4e9.jpg"},{"type":"Photo","galleryUrl":"https://tdrpmimages.azureedge.net/photos/202012-0817-3707/8de0434c-44a1-4ed0-a0d0-2eb41ddedfd2.jpg-1024x786","photoViewerUrl":"https://tdrpmimages.azureedge.net/photos/202012-0817-3707/8de0434c-44a1-4ed0-a0d0-2eb41ddedfd2.jpg"},{"type":"Photo","galleryUrl":"https://tdrpmimages.azureedge.net/photos/202012-0817-3707/12e5a67f-47eb-41b1-ae1b-40bec0af1273.jpg-1024x786","photoViewerUrl":"https://tdrpmimages.azureedge.net/photos/202012-0817-3707/12e5a67f-47eb-41b1-ae1b-40bec0af1273.jpg"},{"type":"Photo","galleryUrl":"https://tdrpmimages.azureedge.net/photos/202012-0817-3707/56f6e89d-db72-4c83-ba5d-fb2a447ef52d.jpg-1024x786","photoViewerUrl":"https://tdrpmimages.azureedge.net/photos/202012-0817-3707/56f6e89d-db72-4c83-ba5d-fb2a447ef52d.jpg"},{"type":"Photo","galleryUrl":"https://tdrpmimages.azureedge.net/photos/202012-0817-3707/4b12eade-6569-43fa-a7bc-c29a2c39afff.jpg-1024x786","photoViewerUrl":"https://tdrpmimages.azureedge.net/photos/202012-0817-3707/4b12eade-6569-43fa-a7bc-c29a2c39afff.jpg"},{"type":"Photo","galleryUrl":"https://tdrpmimages.azureedge.net/photos/202012-0817-3708/d7d5df89-7d7f-4d5f-9c6f-a9e1cac678fa.jpg-1024x786","photoViewerUrl":"https://tdrpmimages.azureedge.net/photos/202012-0817-3708/d7d5df89-7d7f-4d5f-9c6f-a9e1cac678fa.jpg"},{"type":"Photo","galleryUrl":"https://tdrpmimages.azureedge.net/photos/202012-0817-3708/3987434b-8f09-44e7-b9db-285dbb7bcefe.jpg-1024x786","photoViewerUrl":"https://tdrpmimages.azureedge.net/photos/202012-0817-3708/3987434b-8f09-44e7-b9db-285dbb7bcefe.jpg"},{"type":"Photo","galleryUrl":"https://tdrpmimages.azureedge.net/photos/202012-0817-3708/fc366947-de40-47ac-a48d-019a2af3023c.jpg-1024x786","photoViewerUrl":"https://tdrpmimages.azureedge.net/photos/202012-0817-3708/fc366947-de40-47ac-a48d-019a2af3023c.jpg"},{"type":"Photo","galleryUrl":"https://tdrpmimages.azureedge.net/photos/202012-0817-3708/0d30f19b-668e-49b5-b3db-054f4f39e7d5.jpg-1024x786","photoViewerUrl":"https://tdrpmimages.azureedge.net/photos/202012-0817-3708/0d30f19b-668e-49b5-b3db-054f4f39e7d5.jpg"},{"type":"Photo","galleryUrl":"https://tdrpmimages.azureedge.net/photos/202012-0817-3708/18dbe509-8147-4945-88a1-5236280502f5.jpg-1024x786","photoViewerUrl":"https://tdrpmimages.azureedge.net/photos/202012-0817-3708/18dbe509-8147-4945-88a1-5236280502f5.jpg"},{"type":"Photo","galleryUrl":"https://tdrpmimages.azureedge.net/photos/202012-0817-3709/0dd947c4-9335-4a95-980d-7c57788fb6cd.jpg-1024x786","photoViewerUrl":"https://tdrpmimages.azureedge.net/photos/202012-0817-3709/0dd947c4-9335-4a95-980d-7c57788fb6cd.jpg"},{"type":"Photo","galleryUrl":"https://tdrpmimages.azureedge.net/photos/202012-0817-3709/21a8cecd-a012-4cc4-9c76-73613eab3d25.jpg-1024x786","photoViewerUrl":"https://tdrpmimages.azureedge.net/photos/202012-0817-3709/21a8cecd-a012-4cc4-9c76-73613eab3d25.jpg"},{"type":"Photo","galleryUrl":"https://tdrpmimages.azureedge.net/photos/202012-0817-3709/b719a12a-2c2d-4f55-81f7-7eff3e58969f.jpg-1024x786","photoViewerUrl":"https://tdrpmimages.azureedge.net/photos/202012-0817-3709/b719a12a-2c2d-4f55-81f7-7eff3e58969f.jpg"}],
+                        "foreignId":"50199414","count":23},
+                        "hero":{
+                            "make":"Hyundai",
+                            "model":"Santa Fe XL",
+                            "year":"2019",
+                            "trim":"*PREF*BLINDSPOT*HEATEDSEATS*BCAM*RENTAL*AWD*",
+                            "price":"28,499",
+                            "location":"Scarborough",
+                            "mileage":"56,513 km",
+                            "priceAnalysis":"GoodPrice",
+                            "vehicleAge":"",
+                            "priceAnalysisDescription":"$418 BELOW MARKET",
+                            "carfax":"FreeCarFax"},
+                            "adBasicInfo":{"adId":"5_50199414","adIdUnique":"5_50199414_pl","sourceId":"5","foreignId":"50199414","isPrivate":false,"isNew":false,"isNpv":false,"isCommercial":false,
+                            "make":"Hyundai",
+                            "model":"Santa Fe XL",
+                            "year":"2019",
+                            "trim":"*PREF*BLINDSPOT*HEATEDSEATS*BCAM*RENTAL*AWD*",
+                            "price":"$28,499",
+                            "category":"PassengerVehicles",
+                            "pathBodyType":"3837039",
+                            "splashBodyType":"suv",
+                            "microSite":"cars","showSplashPlus":false,"isMobielRequest":false,"isAmvic":false,"dealerCoId":"5-ON20080103120547992"},
+                            "paymentInformation":{"application":"Payment","province":"ON","adId":"5_50199414","language":"en-CA","isStandAlone":"false","paymentOptionsSettingsUrl":"https://payments.autotrader.ca/Payment/PaymentOptionsSettings/","platform":"Desktop","fbpPrice":"28499","fbpSellerTypeAndVehicleStatus":"dealer_used"},
+                            "ngIcoModel":{"enable":true,"application":"Ico","adId":"5-50199414","language":"en-CA","webApiUrl":"//ico.autotrader.ca/Ico/","platform":"Desktop","postalCode":"","maxUploadModificationImages":20,"funnel":"TradeIn","dealerForeignId":"ON20080103120547992",
+                            "dealerName":"AGINCOURT HYUNDAI","icoDemo":false},
+                            "conditionAnalysis":{
+                                "options":["Former Rental","Balance of Factory Warranty"],
+                                "odometerCondition":"Average",
+                                "odometer":"56,513 KM",
+                                "carfax":"FreeCarFax"},
+                                "carInsurance":{"application":"Insurance","adId":"5_50199414","language":"en-ca","targetUrl":"","isStandAlone":false,"platform":"Desktop",
+                                "make":"Hyundai",
+                                "model":"Santa Fe XL",
+                                "year":"2019",
+                                "vin":"KM8SNDHF7KU302239",
+                                "combineWithFinance":false,
+                                "showWidgetOnTop":false,"placementId":"275921950","advertiseId":"460970014"},
+                                "securePayment":{"isSecurePaymentAvailable":false,"securePaymentApiUrl":"https://sellmycar.autotrader.ca/SecurePayment/GetBuyNowLink","securePaymentLandingUrl":"https://sellmycar.autotrader.ca/securepayment/index"},"fuelEconomy":{"showModule":true,"fuelCity":"13.4","fuelHighway":"9.7","fuelCombined":"11.7","tankSize":0,"fuelCost":"126.1","yearlyMileage":20000,"yearlyFuelCost":2959,"showFuelEconomyDisclaimer":true,"dataLayerSectionName":"fuel economy","order":160,"navigationAnchorName":"vdp-fueleconomy-widget","navigationTitle":"Fuel Economy"},"carfax":{"carProofReportUrl":"https://vhr.carfax.ca/main?id=an4q%2fiZW1zqcNQmajBf8%2bUtgUh3aAReN","carProofMessage":"history report - free","carFaxMode":1,"showReportedNoAccidents":false,"showOneOwner":false,"showCarProofWidget":false},"ico":{"showIcoVdp":false,"icoConsumer":{"consumerId":"1c322d3c-0d80-47ab-8113-88ccbfab5e0a","firstName":null,"lastName":null,"emailAddress":null,"postalCode":""},"dealerId":"ON20080103120547992","dealerName":"AGINCOURT HYUNDAI","accuTradeIFrameBaseUrl":"https://trader.accu-trade.com/","dealerKey":"efb423a08ce5529d87580c04e9d0b383b8573c61","accuTradeApiBaseUrl":"https://perseus-api-production.accu-trade.com/api/","icoApiBaseUrl":"//ico.autotrader.ca/Ico/","adId":"5_50199414","icoFunnel":1,"dataLayerSectionName":"ico","order":40,"enableIcoUseApi":false,"maxUploadModificationImages":20,"navigationAnchorName":"ico","navigationTitle":"Instant Cash Offer","enableUserInterest":false,"enableIcoBuyingCenterVerifyPhoneByLookup":false,"enableIcoTradeInVerifyPhoneByLookup":false,"enableIcoDealerWebsiteWidgetVerifyPhoneByLookup":false,"enableIcoBuyingCenterVerifyPhoneByCode":false,"enableIcoTradeInVerifyPhoneByCode":true,"enableIcoDealerWebsiteWidgetVerifyPhoneByCode":false,"icoDemo":false,"showIcoModal":false,"icoPersistentVdp":true,"enableBestTimeToContact":true,"icoCarTooOld":false,"icoCarTooOldMinAge":0,"icoCarTooOldMinMileage":0,"enableIcoVerifyUniquePhoneNumber":false,"icoMaxDuplicatePhoneNumber":0,"icoCovid":false},"salesLeadForm":{"testDriveSchedulerVisible":true,"makeAnOfferVisible":true,"tradeInAppraisalVisible":true,"showCannedMsg":true},"featureHighlights":{"showModule":true,"showAllOptions":false,"highlights":["Alloy Wheels","Rear View Camera","All Wheel Drive","Power Windows","Keyless Entry","Power Locks"],"options":["Leather Wrap Wheel","Cloth Interior"],"dataLayerSectionName":"features","order":150,"navigationAnchorName":"vdp-options-widget","navigationTitle":"Features &"},"specifications":{"specs":[{"key":"Kilometres","value":"56,513 km"},{"key":"Status","value":"Used"},{"key":"Trim","value":"*PREF*BLINDSPOT*HEATEDSEATS*BCAM*RENTAL*AWD*"},{"key":"Body Type","value":"SUV"},{"key":"Engine","value":"3.3"},{"key":"Cylinder","value":"6"},{"key":"Transmission","value":"Automatic"},{"key":"Drivetrain","value":"AWD"},{"key":"Stock Number","value":"P107"},{"key":"Exterior Colour","value":"Grey"},{"key":"Interior Colour","value":"Dark Grey"},{"key":"Doors","value":"4"},{"key":"Fuel Type","value":"Gas"},{"key":"City Fuel Economy","value":"13.4L/100km"},{"key":"Hwy Fuel Economy","value":"9.7L/100km"}],"showMadeIn":false,"dataLayerSectionName":"specs","order":110,"navigationAnchorName":"vdp-specs-widget","navigationTitle":"Specs"},"dealerTrust":{"requestIsFromMobile":false,"dealerCompanyName":"AGINCOURT HYUNDAI","dealerCompanyFormattedName":"AGINCOURT+HYUNDAI","logoUrl":"https://tdrpmimages.azureedge.net/photos/201406/2413/3726/d289bc76-3912-4dde-90be-afce1903030d.jpg","logoResourceLocation":53,"phoneNumber":"1-888-382-6251","isPhoneMask":false,"dealerCompleteAddress":"AGINCOURT HYUNDAI 2730 Markham Rd-Scarborough, ON","dealerAddress":"2730 Markham Rd","cityProvinceName":"Scarborough, ON","dealerReviewId":-1,"bulletPoints":[],"otlDealerEvent":{"otlDealerEventTitle":"Dealership Event - Ends January 2, 2020","otlDealerEventImageUrl":"","enableOTLDealerBanner":true},"dealerLinks":[{"linkUrl":"/dealer/?rcp=0&rcs=0&srt=0&cosid=5&cofid=ON20080103120547992&inMarket=dealerInventory","title":"View all inventory","sellerSectionClientEventHandler":"vdpDataLayerManager.addDealerInventoryClickEvent();","dealerSectionClientEventHandler":"vdpDataLayerManager.addDealerInventoryClickEvent();","gaEvent":"gtm_ad_dealer_inventory_link_click","gaEventDefaultLabel":"vdp"},{"linkUrl":"http://agincourthyundai.net/vehicles/?utm_source=autoTRADER&utm_medium=referral&mk=Hyundai&md=Santa%20Fe%20XL&v1=Passenger%20Vehicles&sc=used","title":"Dealer website","sellerSectionClientEventHandler":"vdpDataLayerManager.addDealerWebsiteClickEvent('seller section');","dealerSectionClientEventHandler":"vdpDataLayerManager.addDealerWebsiteClickEvent('dealer section');","gaEvent":"gtm_ad_dealer_link_click","gaEventDefaultLabel":"dealer section","iconName":"DealerWebSite"}],"googleMapUrl":"https://maps.google.com/maps?q=AGINCOURT+HYUNDAI+2730+Markham+Rd+Scarborough+Ontario&ll=43.82103,-79.246643&z=16","navigationAnchorName":"vdp-dealer-widget","navigationTitle":"Dealer","dataLayerSectionName":"dealer info","isTextConnect":true,"textConnectPhone":"4167883171","order":180,"googleRating":4.4,"googleMapsLinkURL":"https://maps.google.com/?cid=15061962414228284638","showIco":false,"bestPriceAwardUrl":"https://www.autotrader.ca/dealerawards"},"description":{"dataLayerSectionName":"additionalInfo","description":[{"description":"*PREVIOUS DAILY RENTAL*\n\nGREAT VALUE IN THIS WELL EQUIPPED 7 SEATER SUV FINISHED IN NIGHT SKY PEARL ON BLACK CLOTH INTERIOR OPTIONED WITH AWD, KEYLESS ENTRY, POWERED & HEATED FRONT SEATS, HEATED LEATHER WRAPPED STEERING WHEEL, TOUCHSCREEN INFOTAINMENT SYSTEM, APPLE CARPLAY & ANDROID AUTO CAPABILITY, KEYLESS PROXIMITY ENTRY, POWERED TAILGATE, ALLOY WHEELS, REAR VIEW CAMERA, BLIND SPOT SENSORS, LANE DEPARTURE WARNING, AWD LOCK, COLLISION WARNING, POWER WINDOWS, POWER LOCKS AND MUCH MORE! \n\nBALANCE FACTORY WARRANTY AVAILABLE!\n\nStop by our state of art showroom to test drive this vehicle today! \nCarFax vehicle history report readily available online and in store, safety standards certificate included at NO EXTRA CHARGE!\n\nAvailable zero down financing O.A.C. and extended warranty options! We also accept all trades regardless of the year make or model. Agincourt Hyundai pre-owned vehicle is professionally detailed, inspected and serviced by our Hyundai certified technician. \n____________________________________________________\nProudly celebrating our 35th year in business, serving the GTA region and customers all across Canada, we are famous for our no-pressure environment, and honest work ethics.\nWe serve most cities in Canada including Toronto, Etobicoke, Woodbridge, North York, York Region, Vaughan, Thornhill, Richmond Hill, Mississauga, Brampton, Caledon, Scarborough, Markham, Oshawa, Peterborough, Hamilton, Newmarket, Orangeville, Aurora, Brantford, Barrie, Kitchener, Niagara Falls, Oakville, Cambridge, Kitchener, Waterloo, Guelph, London, Windsor, Orillia, Pickering, Ajax, Whitby, Durham, Cobourg, Belleville, Kingston, Ottawa, Montreal, Vancouver, Winnipeg, Calgary, Edmonton, Regina, Halifax, and more! Give us a chance and you'll see why our customers all come back to us! \n_____________________________________________________________________________________\nAdvertised price does not include taxes and licensing fees. No hidden fees. Whether shopping from near or far have comfort in your car purchase. Come on down and visit us, or call our sales department at 1-888-382-6251 "}],"isNpv":false,"isPv":true,"isDealer":true,"isPrivate":false,"order":100,"navigationAnchorName":"vdp-additionalInfo-widget","navigationTitle":"Description"},"priceAnalysis":{"priceAnalysisDescription":"This vehicle is <b>$418 BELOW MARKET (1%)</b> in the <b>Scarborough</b> area. It is analyzed against similar <b>2019 Hyundai Santa Fe XL's</b> and is based on kilometers, transmission, trim, and options.","averageMarketPrice":"$28,917","currentAskingPrice":"$28,499","currentAskingPricePosition":"GoodPriceHighPosition3","priceEvaluation":"GoodPrice","dataLayerSectionName":"price analysis","order":120,"navigationAnchorName":"vdp-price-Analisys","navigationTitle":"Price Analysis"},"brandedInventory":{"hasLocalBrandedInventory":true,"fullSizeWidth":1531,"lowestWidth":1366,"isDynamic":false},"privateWarrantyLink":"","sellFunnelURLHost":"","remoteServices":{"hasUpsellDealerDelivery":false,"hasUpsellHomeTestDrive":false,"hasUpsellDigitalRetail":false,"showDigitalRetailModal":false,"hasLiveChat":false,"hasVirtualAppraisal":false,"hasOnlineReservation":false,"hasBookAnAppointment":true},"dealerId":"ON20080103120547992","hasDealerEvent":false};
+        window['ngVdpGtm'] = {"vehicle":{"adID":"5-50199414","adType":"dealer","car360Enabled":"no","category":"Cars, Trucks & SUVs","condition":"used","dealerID":"5-ON20080103120547992","financingPrice":"no","listingPosition":"pl","make":"Hyundai","model":"Santa Fe XL","price":"28499","priceAnalysis":"good price","priceHistory":"not used","province":"ON","rawLocation":"n/a","strikethrough":"no","subprimeLeadForm":"no","testingDimension":"pageload","transparency":"yes","upgradeHL":"yes","upgradeMobileBoost":"yes","upgradePL":"yes","upgradePPL":"no","upgradeTA":"no","upgradeTopSpot":"no","upgradeXPL":"no","upgradeInline":"no","upgradeSwipePro":"no","vehicleSpecialist":"no","year":"2019","olympus":"no","ncse":"no","chatEnabled":"no","chatProvider":"none","latlong":"","carfax":"view without email","showInsuranceWidgetOnTop":"no","totalPictures":"23","mainPictureCM":"no","cmPictures":"0","activeUpsells":"pl","digitalRetail":"no","serviceBadges":"book an appointment"},"pageType":"ad-details","loginStatus":"not logged in","detailViewType":"dv","showRemarketing":true,"build":"1.18120.1208.4307","clientType":"none","clientId":"-1","clientIp":"none","requestId":"none","googleRemarketingParams":{"pagetype":"Listings","prodid":"5_50199414","source":"Dealer","make":"Hyundai","model":"Santa Fe XL","minyear":2019,"maxyear":2019,"minprice":"28499","maxprice":"28499","condition":"Used","city":"Scarborough"},"optimizely":{"expId":"none","varId":"none"}};
+        window['ngSearchCriterion'] = unescape('{\"address\":\"Scarborough\",\"adStatus\":[1,2,3],\"adType\":[2,1],\"cpoStatus\":0,\"datalayerCpoStatus\":true,\"isCommercial\":false,\"isUniqueSearch\":true,\"keywords\":\"\",\"location\":{\"city\":{\"placeName\":\"Scarborough, ON\",\"coordinates\":{\"latitude\":43.77223,\"longitude\":-79.25666},\"name\":\"Scarborough\",\"province\":{\"abbreviation\":\"ON\",\"name\":\"Ontario\"},\"isCity\":true},\"confidence\":0.0},\"makes\":[\"Hyundai\"],\"micrositeType\":1,\"models\":[\"Santa Fe XL\"],\"pageNumber\":1,\"proximity\":50,\"skip\":0,\"top\":15,\"withPhotos\":true,\"withPrice\":true,\"hasNewAdStatus\":true,\"hasUsedAdStatus\":true,\"hasDamagedAdStatus\":true,\"hasAdTypeDealer\":true,\"hasAdTypePrivate\":true,\"sortBy\":3,\"inMarketType\":\"advancedSearch\",\"microsite\":{\"siteId\":2,\"micrositeType\":1,\"culture\":\"en-CA\",\"landingUrlSegment\":\"cars\",\"searchResultsUrlSegment\":\"cars\",\"displayText\":\"Cars, Trucks \u0026 SUVs\",\"shortName\":\"Car\",\"shortNameGender\":\"\",\"requiresType\":false,\"requiresSubType\":false,\"category2Ids\":[7,9,10,11],\"disableSeoModel\":false,\"defaultWithPrice\":true,\"defaultWithPhotos\":true,\"isNpv\":false,\"displayNeuvesInNpvPopularLinks\":false},\"isDefaultAddress\":false,\"cashDown\":0.0,\"tradeIn\":0.0,\"withShoppingExperience\":\"no\",\"searchCriteriaType\":0,\"showQaAd\":false}');
+        window['ngSearchUrl'] = unescape('/cars/hyundai/santa%20fe%20xl/on/scarborough/?rcp=15\u0026rcs=0\u0026srt=3\u0026prx=50\u0026prv=Ontario\u0026loc=Scarborough\u0026hprc=True\u0026wcp=True');
+        window['ngDataHostName'] = document.getElementById('env').dataset.prefix;
+    }
+
+</script>
+
+    <script>
+        if (window['ngVdpModel'] && window['ngVdpModel'].chatInfo) {
+
+            var siteId = "p-" + window['ngVdpModel'].chatInfo.providerId;
+            var providerId = window['ngVdpModel'].chatInfo.providerId || "";
+            var culture = "us";
+
+        window.lpTag=window.lpTag||{},void 0===window.lpTag._tagCount?(window.lpTag={site:siteId,env:culture,providerId:providerId,section:lpTag.section||"",autoStart:!1!==lpTag.autoStart,ovr:lpTag.ovr||{domain:"tag.contactatonce.com",tagjs:""}
+            ,_v:"1.0",_tagCount:1,protocol:"https:",events:{bind:function(t,e,i){lpTag.defer(function(){lpTag.events.bind(t,e,i)},0)},trigger:function(t,e,i){lpTag.defer(function(){lpTag.events.trigger(t,e,i)},1)}},defer:function(t,e){0==e?(this._defB=this._defB||[],this._defB.push(t)):1==e?(this._defT=this._defT||[],this._defT.push(t)):(this._defL=this._defL||[],this._defL.push(t))},sdk:{exec:function(t,e){lpTag._defExec=lpTag._defExec||{},lpTag._defExec[t]=lpTag._defExec[t]||[],lpTag._defExec[t].push(e)}},load:function(t,e,i){var a=this;setTimeout(function(){a._load(t,e,i)},0)},_load:function(t,
+                e,
+                i) {
+                var a=t;t||(a=this.protocol+"//"+(this.ovr&&this.ovr.domain?this.ovr.domain:"tag.contactatonce.com")+"/tag/tag.js");
+                console.log(a);
+                var n=document.createElement("script");n.setAttribute("charset",e||"UTF8"),i&&n.setAttribute("id",i),n.setAttribute("src",a),document.getElementsByTagName("head").item(0).appendChild(n)
+            },init:function(){this._timing=this._timing||{},this._timing.start=(new Date).getTime();var t=this;window.attachEvent?window.attachEvent("onload",function(){t._domReady("domReady")}):(window.addEventListener("DOMContentLoaded",function(){t._domReady("contReady")},!1),window.addEventListener("load",function(){t._domReady("domReady")},!1)),void 0===window._caotStop&&this.load()},start:function(){this.autoStart=!0},_domReady:function(t){this.isDom||(this.isDom=!0,this.events.trigger("CAOT","DOM_READY",{t:t})),this._timing[t]=(new Date).getTime()},vars:lpTag.vars||[],dbs:lpTag.dbs||[],ctn:lpTag.ctn||[],sdes:lpTag.sdes||[],ev:lpTag.ev||[],tagletCommands:lpTag.tagletCommands||[]},lpTag.init()):window.lpTag._tagCount+=1;
+
+        }
+    </script>
+
+
+<script src="/bundles/Helpers-bootstrap_v337.min-prod.45a62428.js"></script>
+
+
+<script src="/bundles/ng-vdp-synced-prod.af2d5fb6.js" onload="InitTraderNgVdp.Init()"></script>
+
+
+<div id="bannerNationalWrapper">
+    <div class="banner-national-wrapper">
+        <div id="bannerDfpvdp" class="col-md-12 text-center nopadding bannerDfpvdp">
+    <!-- Beginning Async AdSlot 1 for Ad unit autoTRADERMDot/Details  ### size: [[320,50]] -->
+    <div id='div-gpt-ad-national1' class="js-google-dfp">
+    </div>
+</div>
+
+
+    </div>
+</div>
+
+
+
+<div id="vdpContainer"
+     class="container container-main"
+     data-adid="5_50199414"
+     data-fdmid="70199414"
+     data-postalcode="M1X 1E6"
+     data-adidunique="5_50199414_pl"
+     data-vehicle-category="PassengerVehicles">
+    <app-root-vdp-fuji current-culture="en-ca"></app-root-vdp-fuji>
+</div>
+
+
+
+
+
+
+
+    <div class="container main-container">
+        <div class="container">
+                <div id="breadcrumb" class="col-xs-12">
+        <span id="spanBreadCrumbMainContainer" itemscope itemtype="http://schema.org/BreadcrumbList">
+             <ol class="srp-breadcrumbs">
+                    <li>
+                        <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <a itemprop="item" data-ajax="false" href="/cars/?srt=3&amp;cty=Scarborough&amp;hprc=True&amp;wcp=True">
+                                <span itemprop="name">Cars, Trucks &amp; SUVs</span>
+                            </a>
+                            <meta itemprop="position" content="1"/>
+                        </span>
+                    </li>
+                    <li>
+                        <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <a itemprop="item" data-ajax="false" href="/cars/hyundai/?srt=3&amp;cty=Scarborough&amp;hprc=True&amp;wcp=True">
+                                <span itemprop="name">Hyundai</span>
+                            </a>
+                            <meta itemprop="position" content="2"/>
+                        </span>
+                    </li>
+                    <li>
+                        <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <a itemprop="item" data-ajax="false" href="/cars/hyundai/santa%20fe%20xl/?srt=3&amp;cty=Scarborough&amp;hprc=True&amp;wcp=True">
+                                <span itemprop="name">Santa Fe XL</span>
+                            </a>
+                            <meta itemprop="position" content="3"/>
+                        </span>
+                    </li>
+                <li> Vehicle details</li>
+            </ol>
+        </span>
+
+    </div>
+
+        </div>
+    </div>
+
+
+
+
+            
+            
+
+<div id="dvMarketingOptIn" class="footer-marketing-opt-in hidden">
+    <div class="container">
+        <div class="row">
+            <div class="hidden-xs col-md-10 col-lg-12">
+                <div class="not-subscribed">
+                    <div class="optin-label">Subscribe for the latest car reviews, listings, products and more right in your inbox.</div>
+                    <div class="group optin-input">
+                        <input type="text" id="txtOptInEmailFooter" class="email-input" />
+                        <label id="marketingOptInPlaceholderLabel" for="txtOptInEmailFooter" class="group-label">Your email address</label>
+                        <label id="marketingOptInEmailLabel" for="txtOptInEmailFooter" class="floating-label"></label>
+                        <button type="button" id="btnMarketingOptInFooter" class="btn trader-reset">
+                            Subscribe
+                        </button>
+                    </div>
+                    <div id="dvSaveSearchTerms" class="terms-and-conditions" style="display:none;">By clicking 'Subscribe', I agree to receive communications from autoTRADER.  I can unsubscribe at anytime.  I also agree to the <a target="_blank" href="/general/info/privacy.aspx#terms">Terms of Use</a> and <a target="_blank" href="/general/info/privacy.aspx">Privacy Policy</a>.</div>
+                </div>
+                <div class="subscribed hidden">
+                    <div class="subcription-success-header">
+                        Subscription complete!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-3 logo-social-col">
+                <div class="footer-logo">
+                    <a href="/" aria-label="Trader Logo Badge">
+                        <div class="at-logo"></div>
+                    </a>
+                </div>
+                <div class="social-links-container">
+                    <ul>
+                        <li>
+                            <a id="hlnkSocialFacebook" class="sharer icoFacebook" onclick="gtmManager.footerClickSocialNetwork('facebook'); return true;" href="https://www.facebook.com/autoTRADER.ca" target="_blank" rel="noopener" aria-label="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a id="hlnkSocialTwitter" class="sharer icoTwitter" onclick="gtmManager.footerClickSocialNetwork('twitter'); return true;" href="https://twitter.com/autotrader_ca" target="_blank" rel="noopener" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a id="hlnkSocialYouTube" class="sharer icoYouTube" onclick="gtmManager.footerClickSocialNetwork('youtube'); return true;" href="https://www.youtube.com/channel/UC0NV63T5Uj_Gh8CoZ6UcIfQ" target="_blank" rel="noopener" aria-label="YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="app-store-badges">
+                    <a id="lnkAndroidButton" onclick="gtmManager.footerClickGetMobileApp('android');return true;" href="https://play.google.com/store/apps/details?id=ca.autotrader.userapp" target="_blank" rel="noopener">
+                        <div class="app-badge android-badge"></div>
+                    </a>
+                    <a id="lnkAppleButton" onclick="gtmManager.footerClickGetMobileApp('iOS'); return true;" href="http://itunes.apple.com/ca/app/autotrader.ca-new-used-cars/id368660809?mt=8" target="_blank" rel="noopener">
+                        <div class="app-badge apple-badge"></div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="hidden-xs col-sm-4 col-md-3 footer-links">
+                <h3>About Us</h3>
+                <ul id="aboutUsLinkContainer">
+                    <li><a href="http://go.trader.ca/" target="_blank" rel="noopener">TRADER Corporation</a></li>
+                    <li><a href="http://careers.trader.ca/" target="_blank" rel="noopener">Careers</a></li>
+                    <li><a href="/general/info/privacy.aspx">Privacy Policy</a></li>
+                </ul>
+
+                <h3>Dealer Services</h3>
+                <ul id="dealerServicesLinkContainer">
+                        <li><a href="https://go.trader.ca/tadvantage" target="_blank">TAdvantage</a></li>
+                    <li><a href="/dealer/signup/DealerSignup.aspx">vAuto</a></li>
+                </ul>
+            </div>
+
+
+            <div class="hidden-xs col-sm-4 col-md-3 footer-links">
+                <h3>Resources</h3>
+                <ul id="resourcesLinkContainer">
+                    <li><a href="/mobile/">Mobile Apps</a></li>                   
+                    <li><a href="/research/">Vehicle Research</a></li>                   
+                    <li><a href="/motorcycle-research/">Motorcycle Research</a></li>
+                    <li><a href="/reviews/">Owner Reviews</a></li>
+                    <li><a href="/dealer/dealerfinder/DealerFinder.aspx">Car Dealer Locator</a></li>
+                    <li><a href="/car-buying-and-selling-tips.aspx">Car Buying &amp; Selling Tips</a></li>
+                    <li><a href="/FraudProtectionTips">Fraud Protection Tips</a></li>
+                    <li><a href="/search/AdCenterLocator.aspx">Ad Centre Locator</a></li>
+                    <li><a href="/cars/">Used Cars in Canada</a></li>
+                    <li><a href="/cpo">Compare CPO</a></li>
+                </ul>
+            </div>
+
+            <div class="hidden-xs col-sm-4 col-md-3 footer-links">
+                <h3>Partners</h3>
+                <ul id="partnersLinkContainer">
+                    <li><a href="http://www.autos.ca" target="_blank" rel="noopener">Autos.ca</a></li>
+                    <li><a href="http://www.autohebdo.net">autoHEBDO.net</a></li>
+                </ul>
+
+                <h3>Customer Support</h3>
+                <ul id="customerSupportLinkContainer">
+                    <li><a href="/faq">FAQ</a></li>
+                    <li><a href="/general/info/ContactUs.aspx">Feedback &amp; Comments</a></li>
+                    <li><a href="/search/FindMyAd.aspx">Find my Ad</a></li>
+                    <li><a href="http://preferences-mgr.truste.com/?pid=trader01&amp;amp;aid=atraderpub01&amp;amp;type=atrader" target="_blank" rel="noopener">AdChoices</a></li>
+                    <li><a href="/general/info/ContactUs.aspx">Contact Us</a></li>
+                </ul>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="copyrightContainer">
+        <div class="row">
+            <div class="copyright text-center">
+                <span id="lblCopyright">&copy; 2020 TRADER Corporation. All rights reserved. All other trademarks are the property of their respective owners. </span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+        </div>
+    </div>
+    
+    <script src="/bundles/ng-vdp-fuji-polyfills-es5-prod.03772cf0.js" nomodule ></script>
+    <script src="/bundles/ng-vdp-fuji-prod.c7a7f42b.js" async="async"></script>
+
+
+
+        <!-- begin usabilla live embed code -->
+        <script type="text/javascript">
+                    /*{literal}<![CDATA[*/window.lightningjs || function (c) { function g(b, d) { d && (d += (/\?/.test(d) ? "&" : "?") + "lv=1"); c[b] || function () { var i = window, h = document, j = b, g = h.location.protocol, l = "load", k = 0; (function () { function b() { a.P(l); a.w = 1; c[j]("_load") } c[j] = function () { function m() { m.id = e; return c[j].apply(m, arguments) } var b, e = ++k; b = this && this != i ? this.id || 0 : 0; (a.s = a.s || []).push([e, b, arguments]); m.then = function (b, c, h) { var d = a.fh[e] = a.fh[e] || [], j = a.eh[e] = a.eh[e] || [], f = a.ph[e] = a.ph[e] || []; b && d.push(b); c && j.push(c); h && f.push(h); return m }; return m }; var a = c[j]._ = {}; a.fh = {}; a.eh = {}; a.ph = {}; a.l = d ? d.replace(/^\/\//, (g == "https:" ? g : "http:") + "//") : d; a.p = { 0: +new Date }; a.P = function (b) { a.p[b] = new Date - a.p[0] }; a.w && b(); i.addEventListener ? i.addEventListener(l, b, !1) : i.attachEvent("on" + l, b); var q = function () { function b() { return ["<head></head><", c, ' onload="var d=', n, ";d.getElementsByTagName('head')[0].", d, "(d.", g, "('script')).", i, "='", a.l, "'\"></", c, ">"].join("") } var c = "body", e = h[c]; if (!e) return setTimeout(q, 100); a.P(1); var d = "appendChild", g = "createElement", i = "src", k = h[g]("div"), l = k[d](h[g]("div")), f = h[g]("iframe"), n = "document", p; k.style.display = "none"; e.insertBefore(k, e.firstChild).id = o + "-" + j; f.frameBorder = "0"; f.id = o + "-frame-" + j; /MSIE[ ]+6/.test(navigator.userAgent) && (f[i] = "javascript:false"); f.allowTransparency = "true"; l[d](f); try { f.contentWindow[n].open() } catch (s) { a.domain = h.domain, p = "javascript:var d=" + n + ".open();d.domain='" + h.domain + "';", f[i] = p + "void(0);" } try { var r = f.contentWindow[n]; r.write(b()); r.close() } catch (t) { f[i] = p + 'd.write("' + b().replace(/"/g, String.fromCharCode(92) + '"') + '");d.close();' } a.P(2) }; a.l && setTimeout(q, 0) })() }(); c[b].lv = "1"; return c[b] } var o = "lightningjs", k = window[o] = g(o); k.require = g; k.modules = c }({});
+                window.usabilla_live = lightningjs.require("usabilla_live", "//w.usabilla.com/bed4f55ac5dd.js");
+                /*]]>{/literal}*/
+        </script>
+        <!-- end usabilla live embed code -->
+
+
+
+<script type="text/javascript">
+    (function usabillaVarationInit() {
+        var optManager = window.optimizelyManager;
+        if (optManager && optManager.Experiment && optManager.Variation && optManager.Attributes) {
+
+            var optAttribute = optManager.Attributes;
+            window.usabilla_live("data",
+                {
+                    "custom": {
+                        "optExperiment": optManager.Experiment,
+                        "optVariation": optManager.Variation,
+                        "device": optAttribute !== null ? optAttribute.Device : "unknown"
+                    }
+                });
+        }
+
+    })();
+</script>
+    <script async type="text/javascript" src="/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1259887820"></script>
+</body>
+</html>

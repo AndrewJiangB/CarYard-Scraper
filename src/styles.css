@@ -1,0 +1,9 @@
+#main, #second{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+#second {
+    background-color: blue;
+}
